@@ -13,6 +13,9 @@ class Protos {
 }
 
 class ProtosZealot extends Protos implements Unit {
+
+    private int dep = 20;
+
     public String name() {
         return "Zealot";
     }
@@ -22,8 +25,9 @@ class ProtosZealot extends Protos implements Unit {
     }
 
     public int dep() {
-        return 20;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -32,9 +36,13 @@ class ProtosZealot extends Protos implements Unit {
     public boolean flyatk() {
         return false;
     }
+
+
 }
 
 class ProtosDragoon extends Protos implements Unit {
+    private int dep = 15;
+
     public String name() {
         return "Dragoon";
     }
@@ -44,8 +52,9 @@ class ProtosDragoon extends Protos implements Unit {
     }
 
     public int dep() {
-        return 15;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -57,6 +66,9 @@ class ProtosDragoon extends Protos implements Unit {
 }
 
 class ProtosHighTempler extends Protos implements Unit {
+
+    private int dep = 2;
+
     public String name() {
         return "HighTempler";
     }
@@ -66,8 +78,9 @@ class ProtosHighTempler extends Protos implements Unit {
     }
 
     public int dep() {
-        return 2;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -79,6 +92,9 @@ class ProtosHighTempler extends Protos implements Unit {
 }
 
 class ProtosScout extends Protos implements Unit {
+
+    private int dep = 10;
+
     public String name() {
         return "Scout";
     }
@@ -88,8 +104,9 @@ class ProtosScout extends Protos implements Unit {
     }
 
     public int dep() {
-        return 10;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;
@@ -98,9 +115,14 @@ class ProtosScout extends Protos implements Unit {
     public boolean flyatk() {
         return true;
     }
+
+
 }
 
 class ProtosCorsair extends Protos implements Unit {
+
+    private int dep = 12;
+
     public String name() {
         return "Corsair";
     }
@@ -110,8 +132,9 @@ class ProtosCorsair extends Protos implements Unit {
     }
 
     public int dep() {
-        return 12;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;

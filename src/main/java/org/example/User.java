@@ -5,29 +5,52 @@ import java.util.List;
 import java.util.Random;
 
 class User {
+
+
     private String selectedRace; // 선택한 종족
     private List<Unit> unitList; // 유닛 리스트
 
-    public void printUnitList() {
-        int index = 1;
-        for (Unit unit : unitList) {
-            System.out.println(index + "  " + unit.name() + " - ATK: " + unit.atk() + ", DEF: " + unit.dep());
-            index++;
-        }
-    }
+
+    private List<Integer> unitDepList;
 
     public User() {
 
         this.selectedRace = "Terran";
         this.unitList = new ArrayList<>();
+        this.unitDepList = new ArrayList<>();
     }
 
-    // 종족 선택 메서드
+    public List<Unit> getUnitList() {
+        return unitList;
+    }
+
+    public String getSelectedRace() {
+        return selectedRace;
+    }
+
+    public int getUnitListlength() {
+        return unitList.size();
+    }
+
+    public List<Integer> getUnitDepList() {
+        return unitDepList;
+    }
+
+    public void printUnitList() {
+        int index = 1;
+        for (Unit unit : unitList) {
+            System.out.println(
+                    index + "  " + unit.name() + " - ATK: " + unit.atk() + ", DEF: " + unitDepList.get(index - 1));
+            index++;
+        }
+    }
+
+
     public void chooseRace(String race) {
         this.selectedRace = race;
     }
 
-    // 유닛 생성 및 리스트 추가 메서드
+
     public void createAndAddUnits() {
         Random random = new Random();
         Unit[] availableUnits = getAvailableUnits();
@@ -36,16 +59,11 @@ class User {
         for (int i = 0; i < unitCount; i++) {
             Unit randomUnit = availableUnits[random.nextInt(availableUnits.length)];
             unitList.add(randomUnit);
+            unitDepList.add(randomUnit.dep());
         }
     }
 
 
-    // 아군 유닛 리스트 반환
-    public List<Unit> getUnitList() {
-        return unitList;
-    }
-
-    // 선택한 종족의 유닛 배열 반환
     private Unit[] getAvailableUnits() {
         switch (selectedRace) {
             case "Terran":

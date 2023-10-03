@@ -13,6 +13,9 @@ class Zerg {
 }
 
 class ZergZergling extends Zerg implements Unit {
+
+    private int dep = 2;
+
     public String name() {
         return "Zergling";
     }
@@ -22,8 +25,9 @@ class ZergZergling extends Zerg implements Unit {
     }
 
     public int dep() {
-        return 2;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -35,6 +39,9 @@ class ZergZergling extends Zerg implements Unit {
 }
 
 class ZergHydralisk extends Zerg implements Unit {
+
+    private int dep = 7;
+
     public String name() {
         return "Hydralisk";
     }
@@ -44,8 +51,9 @@ class ZergHydralisk extends Zerg implements Unit {
     }
 
     public int dep() {
-        return 7;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -57,6 +65,9 @@ class ZergHydralisk extends Zerg implements Unit {
 }
 
 class ZergUltralisk extends Zerg implements Unit {
+
+    private int dep = 15;
+
     public String name() {
         return "Ultralisk";
     }
@@ -66,8 +77,9 @@ class ZergUltralisk extends Zerg implements Unit {
     }
 
     public int dep() {
-        return 15;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -79,6 +91,9 @@ class ZergUltralisk extends Zerg implements Unit {
 }
 
 class ZergMutalisk extends Zerg implements Unit {
+
+    private int dep = 8;
+
     public String name() {
         return "Mutalisk";
     }
@@ -88,8 +103,9 @@ class ZergMutalisk extends Zerg implements Unit {
     }
 
     public int dep() {
-        return 8;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;
@@ -101,6 +117,9 @@ class ZergMutalisk extends Zerg implements Unit {
 }
 
 class ZergGuardian extends Zerg implements Unit {
+
+    private int dep = 6;
+
     public String name() {
         return "Guardian";
     }
@@ -110,8 +129,9 @@ class ZergGuardian extends Zerg implements Unit {
     }
 
     public int dep() {
-        return 6;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;

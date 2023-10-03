@@ -16,6 +16,9 @@ class Terran {
 
 
 class TerranMarine extends Terran implements Unit {
+
+    private int dep = 10;
+
     public String name() {
         return "Marine";
     }
@@ -25,8 +28,9 @@ class TerranMarine extends Terran implements Unit {
     }
 
     public int dep() {
-        return 10;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -38,6 +42,9 @@ class TerranMarine extends Terran implements Unit {
 }
 
 class TerranTank extends Terran implements Unit {
+
+    private int dep = 15;
+
     public String name() {
         return "Tank";
     }
@@ -47,8 +54,9 @@ class TerranTank extends Terran implements Unit {
     }
 
     public int dep() {
-        return 15;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -60,6 +68,9 @@ class TerranTank extends Terran implements Unit {
 }
 
 class TerranGoliath extends Terran implements Unit {
+
+    private int dep = 15;
+
     public String name() {
         return "Goliath";
     }
@@ -69,8 +80,9 @@ class TerranGoliath extends Terran implements Unit {
     }
 
     public int dep() {
-        return 15;
+        return dep;
     }
+
 
     public boolean fly() {
         return false;
@@ -82,6 +94,8 @@ class TerranGoliath extends Terran implements Unit {
 }
 
 class TerranWraith extends Terran implements Unit {
+    private int dep = 10;
+
     public String name() {
         return "Wraith";
     }
@@ -91,8 +105,9 @@ class TerranWraith extends Terran implements Unit {
     }
 
     public int dep() {
-        return 10;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;
@@ -104,6 +119,7 @@ class TerranWraith extends Terran implements Unit {
 }
 
 class TerranValkyrie extends Terran implements Unit {
+    private int dep = 12;
 
     public String name() {
         return "Valkyrie";
@@ -114,8 +130,9 @@ class TerranValkyrie extends Terran implements Unit {
     }
 
     public int dep() {
-        return 12;
+        return dep;
     }
+
 
     public boolean fly() {
         return true;
